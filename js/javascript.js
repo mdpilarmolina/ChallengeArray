@@ -11,9 +11,22 @@ for (let i = 1; i <= 20; i++) {
 
 //5. Switch de idiomas: Usar un switch para imprimir un saludo diferente según el idioma (mínimo 7 idiomas).
 
-//6. Array de animales: Crear un array con 5 animales. Añadir 2 más (uno al inicio y otro al final). 
+//6. Array de animales: Crear un array con 5 animales.
+const animales = ["Leon", "Zorro", "Lobo", "Gato", "Pantera"];
+
+// Añadir 2 más (uno al inicio y otro al final). 
+animales.unshift("Oso");
+animales.push("Elefante");
+console.log //como hacer console.
+
 // Eliminar el que está en la tercera posición.
+animales.splice(2,1)
+console.log("Array después de eliminar la tercera posición:", [...animales]);
+
 // Mostrar la cantidad total de animales.
+console.log("Cantidad total de animales", animales.length)
+
+
 
 //7. Cálculo de IMC: Diseñar un algoritmo que calcule el IMC con peso (kg) y altura (m).
 // Mostrar el resultado con su categoría: Menos de 18.5 → Peso bajo. Entre 18.5 y 24.99 → Peso normal 25 o más → Sobrepeso
