@@ -17,7 +17,8 @@ const animales = ["Leon", "Zorro", "Lobo", "Gato", "Pantera"];
 // Añadir 2 más (uno al inicio y otro al final). 
 animales.unshift("Oso");
 animales.push("Elefante");
-console.log //como hacer console.
+console.log("Array con nuevo animal al inicio", animales.unshift)
+console.log("Array con nuevo animal al final de la lista", animales.push)
 
 // Eliminar el que está en la tercera posición.
 animales.splice(2,1)
@@ -62,7 +63,7 @@ console.log("Los primeros 5 equipos son:", primerosCinco);
 const cuantosHay = equipos.length
 console.log("Cantidad de equipos en el array: ", equipos.length)
 
-//Transformar a mayúsculas o minúsculas (map)
+//Transformar a mayúsculas o minúsculas (map) ia
 const enMayusculas = equipos.map(function(pais) {
     return pais.toUpperCase();
 });
@@ -73,10 +74,154 @@ const enMinusculas = equipos.map(function(pais) {
 });
 console.log("Todos en minúsculas:", enMinusculas);
 
-//Filtrar por letra inicial (filter)
+//Filtrar por letra inicial (filter) ia
 const empiezanConC = equipos.filter(pais => pais.startsWith("C"));
 console.log("Equipos que empiezan con la letra C:", empiezanConC);
 
 
 const pantalla = document.getElementById("pantalla");
 pantalla.innerHTML =`<h2>Paises Mundial 2026: </h2><p>${equipos}</p>`
+
+
+const selecciones = [
+  {
+    pais: "Argentina",
+    grupo: "J",
+    puntos: 6,
+    golesFavor: 5,
+    golesContra: 1,
+    jugadores: [
+      "Julián Álvarez",
+      "Enzo Fernández",
+      "Alexis Mac Allister"
+    ]
+  },
+  {
+    pais: "Brasil",
+    grupo: "C",
+    puntos: 4,
+    golesFavor: 4,
+    golesContra: 2,
+    jugadores: [
+      "Vinicius Jr",
+      "Rodrygo",
+      "Bruno Guimarães"
+    ]
+  },
+  {
+    pais: "España",
+    grupo: "H",
+    puntos: 7,
+    golesFavor: 8,
+    golesContra: 3,
+    jugadores: [
+      "Pedri",
+      "Lamine Yamal",
+      "Nico Williams"
+    ]
+  },
+  {
+    pais: "Francia",
+    grupo: "I",
+    puntos: 5,
+    golesFavor: 6,
+    golesContra: 4,
+    jugadores: [
+      "Mbappé",
+      "Camavinga",
+      "Tchouaméni"
+    ]
+  },
+  {
+    pais: "México",
+    grupo: "A",
+    puntos: 2,
+    golesFavor: 2,
+    golesContra: 5,
+    jugadores: [
+      "Santiago Giménez",
+      "Edson Álvarez",
+      "Luis Chávez"
+    ]
+  }
+];
+
+//1.Mostrar por consola todos los países participantes.
+const nombresPaises = selecciones.map(seleccion => seleccion.pais);
+console.log("Los paises participantes son: ", nombresPaises);
+
+//2.Mostrar la cantidad total de selecciones.
+const MostrarLasSelecciones = selecciones.length
+console.log(`Todas las Selecciones ${selecciones.length}`)
+
+//3.Mostrar el nombre del primer jugador de Argentina.
+const jugadores = [
+      "Julián Álvarez",
+      "Enzo Fernández",
+      "Alexis Mac Allister"
+    ]
+console.log("Primer jugador de la seleccion argentina: ", jugadores[0])
+
+//4.Mostrar todos los jugadores de España.
+const mostrarjugadoresEspaña = [
+      "Pedri",
+      "Lamine Yamal",
+      "Nico Williams"
+    ]
+console.log("Los Jugadores de España: ", mostrarjugadoresEspaña.length)
+
+//5.Agregar una nueva selección utilizando push().
+/*{
+   pais: "Portugal",
+   grupo: "K",
+   puntos: 3,
+   golesFavor: 3,
+   golesContra: 2,
+   jugadores: [
+      "Cristiano Ronaldo",
+      "Bruno Fernandes",
+      "Bernardo Silva"
+   ]
+}*/
+
+const NuevaSeleccion = {pais: "Portugal",
+   grupo: "K",
+   puntos: 3,
+   golesFavor: 3,
+   golesContra: 2,
+   jugadores: [
+      "Cristiano Ronaldo",
+      "Bruno Fernandes",
+      "Bernardo Silva"
+   ]}
+   console.log(selecciones.push(NuevaSeleccion))
+
+/* 6. Mostrar por consola todos los países participantes.Resultado esperado
+Argentina
+Brasil
+España
+Francia
+México*/
+
+const paises = ["Argentina", "Brasil", "España", "Francia", "Mexico", "Portugal"]
+
+
+//7.Obtener únicamente las selecciones con 5 puntos o más.
+
+
+//8. filter(): Obtener únicamente las selecciones con 5 puntos o más.
+
+//9. filter():Mostrar las selecciones que tengan más goles a favor que en contra.
+
+//10. find(): Buscar la selección de Brasil. Mostrar el objeto completo.
+
+//11. some(): ¿Existe alguna selección con 7 puntos?
+// Debe mostrar: true
+
+//12. every(): ¿Todas las selecciones tienen al menos 2 jugadores?
+
+//13. reduce(): Calcular el total de goles convertidos entre todas las selecciones.
+
+//14. sort(): Ordenar las selecciones de mayor a menor cantidad de puntos.
+
+//15. sort(): Ordenar alfabéticamente por país.
